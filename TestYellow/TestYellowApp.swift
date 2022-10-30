@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct TestYellowApp: App {
+    @StateObject var navhelp: NavHelper = NavHelper()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContinentView().environmentObject(navhelp)
         }
     }
 }
